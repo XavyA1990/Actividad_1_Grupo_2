@@ -1,12 +1,14 @@
 import './App.css'
+import GlobalRouter from "./router.tsx";
+import {LibraryProvider} from "./context/LibraryContext.tsx";
 
-function App() {
+function AppRouter() {
 
-  return (
-    <>
-      <p>Hola mundo</p>
-    </>
+    return (
+        <LibraryProvider>
+            <GlobalRouter/>
+        </LibraryProvider>
   )
 }
 
-export default App
+export default AppRouter
