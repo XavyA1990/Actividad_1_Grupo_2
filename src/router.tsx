@@ -1,15 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "@/pages/Home";
+import BookDetail from "@/pages/BookDetail";
 
-function GlobalRouter() {
+export const GlobalRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>Home Page</div>} />
-        <Route path="/page1" element={<div>Page 1</div>} />
-        <Route path="/page2" element={<div>Page 1</div>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/books/:id" element={<BookDetail />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default GlobalRouter;
