@@ -3,7 +3,6 @@ import { booksMock } from "@/utils/books.mock.ts";
 import type { Book } from "@/types/book.ts";
 import { AddToCartButton } from "@/components/AddToCartButton";
 
-
 export const BookDetail = () => {
   const { id } = useParams<{ id: string }>();
 
