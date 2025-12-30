@@ -1,6 +1,8 @@
 import { useParams,useNavigate } from "react-router-dom";
 import { booksMock } from "@/utils/books.mock.ts";
 import type { Book } from "@/types/book.ts";
+import { AddToCartButton } from "@/components/AddToCartButton";
+
 
 export const BookDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -40,6 +42,8 @@ export const BookDetail = () => {
           <h1 className="book-detail__title">{book.title}</h1>
           <h2 className="book-detail__author">{book.author}</h2>
           <p className="book-detail__description">{book.description}</p>
+          <p className="book-detail__price">Precio: ${book.price.toFixed(2)}</p>
+          <AddToCartButton book_id={book.id} />
         </div>
       </section>
     </main>
