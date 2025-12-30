@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
-import { booksMock } from "@/utils/books.mock";
-import type { Book } from "@/types/book";
+import { booksMock } from "@/utils/books.mock.ts";
+import type { Book } from "@/types/book.ts";
 
 export const BookDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -34,9 +34,6 @@ export const BookDetail = () => {
           <p className="book-detail__description">{book.description}</p>
         </div>
       </section>
-      <footer className="home__footer">
-        © 2025 Relatos de Papel — Proyecto académico - Grupo 2
-      </footer>
     </main>
   );
 };
