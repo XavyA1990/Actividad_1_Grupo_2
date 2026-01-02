@@ -1,11 +1,10 @@
-import useRedirection from "../../hooks/useRedirection.tsx";
+import useRedirection from "../../hooks/useRedirection.ts";
 import { useNavigate} from 'react-router-dom';
 
 export const Landing = () => {
     const homePath = "/home";
     useRedirection(homePath, 5000);
     const navigate = useNavigate()
-    // @ts-ignore
     return (
         <div className="landing__container">
             <div className="max-w-2xl mx-auto text-center animate-fadeInUp">
